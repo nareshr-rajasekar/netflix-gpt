@@ -35,7 +35,7 @@ const Login = () =>{
                     //     photoURL : user?.photoURL
                     //   }))
                    
-                    navigate('/browse')
+                   
                 // ...
             })
             .catch((error) => {
@@ -53,7 +53,6 @@ const Login = () =>{
                 displayName: name?.current.value, photoURL: "https://avatars.githubusercontent.com/u/192721077?s=400&u=1e0c8ffdcc8eeb8157d107ecbbb8e0c6f79b2414&v=4"
               }).then(() => {
                 const user = auth.currentUser
-                console.log("auth.currentUser", auth.currentUser);
                 
                     
                     dispatch(addUser({
@@ -62,7 +61,7 @@ const Login = () =>{
                         uid : user?.uid,
                         photoURL : user?.photoURL
                       }))
-                    navigate('/browse')
+                  
                     
               }).catch((error) => {
                 const errorCode = error.code;
@@ -78,10 +77,6 @@ const Login = () =>{
               // ..
             });
         }
-
-        
-        
-        
     }
 
     const handleFormToggle = () =>{
